@@ -4,9 +4,17 @@ document.addEventListener('DOMContentLoaded', function() {
   
   if (container && typeof projects !== 'undefined') {
     projects.forEach((project, index) => {
+      // Create a wrapper link
+      const projectLink = document.createElement('a');
+      projectLink.href = `project-${index + 1}.html`;
+      projectLink.className = 'card-link';
+      projectLink.style.textDecoration = 'none';
+      projectLink.style.color = 'inherit';
+      
       const projectCard = document.createElement('div');
       projectCard.className = 'card animate-fade-in-up';
       projectCard.style.borderTop = '4px solid var(--primary-blue)';
+      projectCard.style.cursor = 'pointer';
       
       // Format metrics - handle both array and object formats
       const metricsArray = Array.isArray(project.metrics) ? project.metrics : [];
@@ -48,10 +56,13 @@ document.addEventListener('DOMContentLoaded', function() {
           ${metricsHtml}
         </ul>` : ''}
         
-        <a href="project-${index + 1}.html" class="btn btn-primary" style="display: inline-block;">View Full Case Study →</a>
+        <div style="margin-top: var(--spacing-lg); color: var(--primary-blue); font-weight: 600;">
+          View Full Case Study →
+        </div>
       `;
       
-      container.appendChild(projectCard);
+      projectLink.appendChild(projectCard);
+      container.appendChild(projectLink);
     });
   }
 });
