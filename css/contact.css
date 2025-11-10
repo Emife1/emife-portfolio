@@ -1,0 +1,212 @@
+/* ==========================================
+   TESTIMONIALS SECTION STYLES
+   ========================================== */
+
+#testimonialsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-2xl);
+}
+
+.testimonial-card {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.75rem;
+  padding: var(--spacing-lg);
+  backdrop-filter: blur(10px);
+  transition: all var(--transition-base);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonial-card::before {
+  content: '"';
+  position: absolute;
+  top: -20px;
+  left: -10px;
+  font-size: 4rem;
+  opacity: 0.1;
+  font-weight: bold;
+}
+
+.testimonial-card:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+  position: relative;
+  z-index: 1;
+}
+
+.testimonial-avatar {
+  font-size: 2.5rem;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+}
+
+.testimonial-info h4 {
+  color: var(--neutral-white);
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.testimonial-quote {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: var(--spacing-md);
+  position: relative;
+  z-index: 1;
+  flex-grow: 1;
+}
+
+.testimonial-context {
+  margin-top: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.testimonial-context .badge {
+  display: inline-block;
+  font-size: 0.75rem;
+}
+
+/* Rating Stars */
+.testimonial-rating {
+  color: #fbbf24;
+  margin-bottom: var(--spacing-md);
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+}
+
+/* ==========================================
+   ABOUT SECTION STYLES
+   ========================================== */
+
+#about {
+  background: var(--neutral-50);
+}
+
+.about-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: var(--shadow-lg);
+  object-fit: cover;
+}
+
+/* ==========================================
+   CONTACT SECTION STYLES
+   ========================================== */
+
+#contact {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.98), rgba(30, 64, 175, 0.95));
+  color: var(--neutral-white);
+}
+
+#contact h2 {
+  color: var(--neutral-white);
+}
+
+#contact .text-muted {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.contact-card {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--neutral-white);
+  backdrop-filter: blur(10px);
+}
+
+.contact-card h4 {
+  color: var(--neutral-white);
+}
+
+.contact-card a {
+  color: var(--primary-accent);
+}
+
+.contact-card a:hover {
+  color: var(--neutral-white);
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: var(--neutral-white);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: var(--primary-accent);
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.2);
+}
+
+.contact-form label {
+  color: var(--neutral-white);
+}
+
+/* ==========================================
+   RESPONSIVE ADJUSTMENTS
+   ========================================== */
+
+@media (max-width: 768px) {
+  #testimonialsContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial-card {
+    padding: var(--spacing-md);
+  }
+
+  .testimonial-header {
+    margin-bottom: var(--spacing-md);
+  }
+
+  .testimonial-quote {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonial-avatar {
+    font-size: 2rem;
+    width: 50px;
+    height: 50px;
+  }
+
+  .testimonial-quote {
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+
+  .contact-card {
+    margin-bottom: var(--spacing-lg);
+  }
+}

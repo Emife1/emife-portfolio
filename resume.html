@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Victoria Emife - Resume</title>
+  
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F9PNVV2X93"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F9PNVV2X93');
+  </script>
+  <!-- End Google Analytics -->
+  
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #2c3e50;
+      background: white;
+    }
+    
+    .resume-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 30px;
+    }
+    
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+      border-bottom: 3px solid #2c3e50;
+      padding-bottom: 20px;
+    }
+    
+    h1 {
+      font-size: 2.5rem;
+      color: #1e3a5f;
+      margin-bottom: 5px;
+    }
+    
+    .contact-info {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      font-size: 0.9rem;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+    
+    .contact-info span {
+      display: inline-block;
+    }
+    
+    .contact-info span:not(:last-child)::after {
+      content: " | ";
+      margin-left: 20px;
+    }
+    
+    .professional-summary {
+      background: #f0f4f8;
+      padding: 20px;
+      border-radius: 5px;
+      margin-bottom: 30px;
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+    
+    .section {
+      margin-bottom: 30px;
+    }
+    
+    .section-title {
+      font-size: 1.4rem;
+      color: #1e3a5f;
+      border-bottom: 2px solid #0066cc;
+      padding-bottom: 8px;
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
+    
+    .job, .education, .certification {
+      margin-bottom: 20px;
+    }
+    
+    .job-header, .edu-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 5px;
+      flex-wrap: wrap;
+    }
+    
+    .job-title {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: #2c3e50;
+    }
+    
+    .company, .school {
+      color: #0066cc;
+      font-weight: 600;
+    }
+    
+    .date {
+      color: #7f8c8d;
+      font-size: 0.9rem;
+      font-style: italic;
+    }
+    
+    .job-description {
+      margin: 10px 0;
+      font-size: 0.95rem;
+    }
+    
+    .achievements {
+      list-style: none;
+      margin: 10px 0;
+      padding-left: 20px;
+    }
+    
+    .achievements li {
+      margin-bottom: 8px;
+      position: relative;
+      padding-left: 15px;
+    }
+    
+    .achievements li:before {
+      content: "▸";
+      position: absolute;
+      left: 0;
+      color: #0066cc;
+    }
+    
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    
+    .skill-category {
+      margin-bottom: 15px;
+    }
+    
+    .skill-category-title {
+      font-weight: 700;
+      color: #1e3a5f;
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+    }
+    
+    .skill-list {
+      list-style: none;
+      padding-left: 0;
+    }
+    
+    .skill-list li {
+      margin-bottom: 6px;
+      padding-left: 15px;
+      position: relative;
+      font-size: 0.9rem;
+    }
+    
+    .skill-list li:before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #27ae60;
+      font-weight: bold;
+    }
+    
+    .cert-badge {
+      display: inline-block;
+      background: #e8f4f8;
+      color: #0066cc;
+      padding: 6px 12px;
+      border-radius: 3px;
+      margin-right: 10px;
+      margin-bottom: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+    
+    .metrics-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+      margin: 20px 0;
+    }
+    
+    .metric-box {
+      background: #f0f4f8;
+      padding: 15px;
+      text-align: center;
+      border-radius: 5px;
+      border-left: 4px solid #0066cc;
+    }
+    
+    .metric-value {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #0066cc;
+    }
+    
+    .metric-label {
+      font-size: 0.8rem;
+      color: #7f8c8d;
+      margin-top: 5px;
+    }
+    
+    @media print {
+      body { background: white; }
+      .resume-container { padding: 20px; }
+    }
+    
+    @media (max-width: 768px) {
+      .job-header { flex-direction: column; }
+      .date { margin-top: 5px; }
+      .skills-grid { grid-template-columns: 1fr; }
+      .metrics-row { grid-template-columns: repeat(2, 1fr); }
+      .contact-info { flex-direction: column; gap: 10px; }
+      .contact-info span:not(:last-child)::after { content: ""; margin: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="resume-container">
+    <header>
+      <h1>Victoria Emife</h1>
+      <div class="contact-info">
+        <span>📧 orisaseemife@yahoo.com</span>
+        <span>📱 +1 437 557 0071</span>
+        <span>📍 Toronto, Ontario</span>
+        <span>🔗 linkedin.com/in/olufunke-data-analyst</span>
+      </div>
+    </header>
+
+    <div class="professional-summary">
+      <strong>AP & Finance Operations Expert | Accounts Payable Transformation | Automation & Process Optimization Leader</strong>
+      <p style="margin-top: 10px;">Strategic AP professional with <strong>3+ years</strong> managing high-volume operations processing <strong>650+ monthly invoices</strong> across <strong>$12M+ annually</strong> in accounts payable transformation, workflow automation, and financial controls that reduced processing costs by <strong>35%</strong> while maintaining <strong>99.8% accuracy</strong>. Spearheaded automation initiatives saving <strong>$38K annually</strong> and recovered <strong>$34.5K</strong> in duplicate payments through systematic audits. <strong>Zero audit findings</strong> across 3 consecutive external audits.</p>
+      
+      <p style="margin-top: 8px;"><strong>Core Expertise:</strong> Sage 300/Intacct ERP, Stampli AI invoice automation, Power BI dashboards, Advanced Excel (VBA, Power Query), workflow orchestration, SOX compliance, vendor analytics, month-end acceleration, and continuous improvement methodology.</p>
+      
+      <p style="margin-top: 8px;"><strong>Target Roles:</strong> AP Specialist | Finance Operations Analyst | Full-Cycle Staff Accountant</p>
+      
+      <p style="margin-top: 8px;"><strong>Impact:</strong> 0 audit findings across 3 consecutive external audits; reduced Days Payable Outstanding from 42 to 28 days; achieved <strong>99.8% process accuracy</strong>; delivered <strong>$34.5K fraud recovery</strong> and <strong>$38K+ automation savings</strong>.</p>
+    </div>
+
+    <div class="metrics-row">
+      <div class="metric-box">
+        <div class="metric-value">$34.5K</div>
+        <div class="metric-label">Fraud Recovered</div>
+      </div>
+      <div class="metric-box">
+        <div class="metric-value">650+</div>
+        <div class="metric-label">Monthly Invoices Processed</div>
+      </div>
+      <div class="metric-box">
+        <div class="metric-value">52%</div>
+        <div class="metric-label">Processing Time Reduced</div>
+      </div>
+      <div class="metric-box">
+        <div class="metric-value">99.8%</div>
+        <div class="metric-label">Process Accuracy</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">Professional Experience</h2>
+      
+      <div class="job">
+        <div class="job-header">
+          <div>
+            <div class="job-title">Accounts Payable Specialist</div>
+            <div class="company">TDI International Ag Inc / XGD Systems - Mono, ON</div>
+          </div>
+          <div class="date">October 2021 – Present</div>
+        </div>
+        <div class="job-description">Golf course restoration & construction builder | $60M revenue | 150+ vendors | 3-person finance team. Promoted to Accounts Payable Specialist (March 2023) based on process automation leadership and operational excellence.</div>
+        <ul class="achievements">
+          <li><strong>Process Automation & Leadership:</strong> Spearheaded Stampli AI ping manual processing time 45% and saving $38K annually in labor costs. Redesigned AP workflow eliminating 8 bottlenecks; decreased Days Payable Outstanding from 42 to 28 days. Built comprehensive AP policy manual and internal controls framework adopted company-wide. Train and mentor 2 junior AP clerks on system processes, best practices, and compliance requirements.</li>
+          <li><strong>Transaction Management & Vendor Relations:</strong> Process 650+ monthly invoices ($1M+ value) with 99.8% accuracy rate; manage weekly payment runs totaling $4.2M monthly via EFT, wire, ACH, and international payments. Reduced invoice processing cycle time 52% (8.5 to 4.1 days) through automated 3-way matching and digital approval routing. Serve as strategic liaison for 150+ vendors; resolve 97% of inquiries within same business day. Negotiated early payment terms securing 2%/Net 10 discounts on $420K annually, generating $8,400 in cost savings.</li>
+          <li><strong>Financial Analysis & Compliance:</strong> Perform monthly GL reconciliations for 12 AP-related accounts within $500 variance tolerance. Created automated Power BI dashboards tracking AP aging, vendor concentration risk, payment velocity, and discount utilization. Prepare monthly accrual journal entries for unbilled services and goods-in-transit ($80K-$120K). Support SOX compliance by documenting processes, testing controls, and remediating 5 identified control gaps. Primary AP contact for external auditors; zero findings in 3 consecutive years (2022-2024).</li>
+          <li><strong>Identified and recovered $34,500</strong> in duplicate payments, incorrect pricing, and unearned discounts through systematic reconciliation. Detected and prevented $12,000 in fraudulent invoice schemes through enhanced vendor verification protocols.</li>
+          <li><strong>Cross-Functional Projects:</strong> Led AP module implementation during Sage 300 to Sage Intacct cloud migration affecting 15,000+ historical transactions. Collaborated with IT on ERP customizations improving invoice coding accuracy by 40%.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <div>
+            <div class="job-title">Accounts Payable Clerk</div>
+            <div class="company">TDI Golf & XGD Systems</div>
+          </div>
+          <div class="date">2015 – 2017</div>
+        </div>
+        <div class="job-description">Processed AP transactions, maintained vendor relationships, and performed month-end close procedures.</div>
+        <ul class="achievements">
+          <li>Processed 500+ invoices monthly with 99.8% accuracy rate</li>
+          <li>Managed vendor master database with 200+ active vendors</li>
+          <li>Reconciled monthly vendor statements identifying discrepancies</li>
+          <li>Supported audit functions during annual financial statement audit</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <div>
+            <div class="job-title">AP Intern / Data Analyst</div>
+            <div class="company">XGD Systems</div>
+          </div>
+          <div class="date">2014 – 2015</div>
+        </div>
+        <div class="job-description">Supported AP operations and conducted data analysis projects exploring automation opportunities.</div>
+        <ul class="achievements">
+          <li>Created Excel dashboards tracking AP metrics (aging, DPO, processing time)</li>
+          <li>Analyzed invoice processing workflow identifying 6 automation opportunities</li>
+          <li>Assisted with quarterly vendor reconciliations</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">Core Competencies</h2>
+      <div class="skills-grid">
+        <div>
+          <div class="skill-category">
+            <div class="skill-category-title">Accounting Operations</div>
+            <ul class="skill-list">
+              <li>Full-Cycle AP/AR</li>
+              <li>General Ledger</li>
+              <li>Month-End Close</li>
+              <li>Accrual Accounting</li>
+              <li>Bank Reconciliation</li>
+              <li>Fixed Asset Tracking</li>
+              <li>Sales Tax Compliance (HST/GST/PST)</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <div class="skill-category-title">ERP & Systems</div>
+            <ul class="skill-list">
+              <li>Sage 50/300/Intacct</li>
+              <li>QuickBooks Desktop/Online</li>
+              <li>Xero</li>
+              <li>SAP Business One</li>
+              <li>Bill.com</li>
+              <li>Stampli</li>
+              <li>Tipalti</li>
+              <li>NetSuite</li>
+              <li>Coupa</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div class="skill-category">
+            <div class="skill-category-title">Process & Controls</div>
+            <ul class="skill-list">
+              <li>SOX Compliance</li>
+              <li>Internal Controls</li>
+              <li>Audit Support</li>
+              <li>Fraud Detection</li>
+              <li>KPI Reporting</li>
+              <li>Workflow Automation</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <div class="skill-category-title">Analytics & Reporting</div>
+            <ul class="skill-list">
+              <li>Advanced Excel (VBA, Power Query, Power Pivot)</li>
+              <li>Power BI Dashboards</li>
+              <li>Variance Analysis</li>
+              <li>Financial Modeling</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">Automation & Technology Stack</h2>
+      <p style="margin-bottom: 15px; font-size: 0.95rem;"><strong>Integrated Tooling for AP Transformation:</strong> Leveraged <strong>Sage 300/Intacct & NetSuite ERP</strong> (GL, AP, multi-entity reporting) integrated with <strong>Stampli AI</strong> (intelligent invoice capture, OCR), <strong>Power BI</strong> (real-time dashboards), <strong>SQL</strong> (data extraction & reconciliation), and <strong>Excel Power Query</strong> (workflow automation, accrual modeling) to design end-to-end <strong>touchless invoice processing</strong> workflows achieving 99%+ First Pass Match accuracy. Explored RPA-ready process documentation standards for future automation opportunities. Designed workflows supporting <strong>working capital optimization</strong> and <strong>continuous improvement culture</strong>.</p>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">Certifications & Credentials</h2>
+      <div>
+        <div class="cert-badge">Certified Bookkeeper (CB) – Canadian Bookkeepers Association | June 2024</div>
+        <div class="cert-badge">Certified Accounts Payable Associate (CAPA) – Institute of Finance & Management | February 2024</div>
+        <div class="cert-badge">QuickBooks Online Certified User – Intuit | November 2023</div>
+        <div class="cert-badge">Advanced Excel for Finance Professionals – Corporate Finance Institute | 2023</div>
+        <div class="cert-badge">Continuing Education (2023–2024): Internal Controls & SOX Compliance | Invoice Automation & AI | Fraud Prevention & Detection | Power BI for Financial Reporting</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">Education</h2>
+      <div class="education">
+        <div class="edu-header">
+          <div>
+            <div class="job-title">Bachelor of Public Administration</div>
+            <div class="school">Kogi State University, Anyigba</div>
+          </div>
+          <div class="date">Graduated September 2014</div>
+        </div>
+        <p style="font-size: 0.9rem; margin-top: 5px;">GPA: 3.7/4.0</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">Technical Projects & Implementations</h2>
+      <ul class="achievements" style="columns: 2;">
+        <li><strong>Multi-ERP Integration:</strong> Configured and tested GL, AP, and reporting modules across Sage 300/Intacct and NetSuite during enterprise migrations</li>
+        <li><strong>Power BI Reporting Suite:</strong> Built 12+ dashboards integrating Sage 300/Intacct and NetSuite, sales, and operational data</li>
+        <li><strong>Accrual Forecasting Model:</strong> Developed statistical model predicting monthly accruals with 95%+ accuracy</li>
+        <li><strong>Vendor Performance Scorecards:</strong> Created automated scorecard system tracking cost, quality, and delivery metrics for 50+ vendors</li>
+        <li><strong>Internal Audit SOX Program:</strong> Designed and implemented SOX 404 controls testing framework</li>
+        <li><strong>Fraud Detection Procedures:</strong> Developed analytics identifying vendor duplicate creation, invoice manipulation patterns</li>
+      </ul>
+    </div>
+
+    <footer style="text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid #ecf0f1; color: #7f8c8d; font-size: 0.85rem;">
+      <p>References and detailed project documentation available upon request</p>
+    </footer>
+  </div>
+</body>
+</html>

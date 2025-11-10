@@ -1,0 +1,292 @@
+/* ==========================================
+   ABOUT SECTION ADDITIONAL STYLES
+   ========================================== */
+
+#about {
+  background: var(--neutral-50);
+}
+
+#about h2 {
+  color: var(--primary-dark);
+  margin-bottom: var(--spacing-lg);
+}
+
+#about .text-muted {
+  color: var(--neutral-500);
+}
+
+.about-card {
+  background: var(--neutral-white);
+  border: 1px solid var(--neutral-200);
+  border-radius: 0.75rem;
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-base);
+}
+
+.about-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+.about-card h3 {
+  color: var(--primary-dark);
+  border-bottom: 2px solid var(--primary-blue);
+  padding-bottom: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+.about-card h4 {
+  color: var(--primary-blue);
+  margin-top: var(--spacing-lg);
+  margin-bottom: var(--spacing-sm);
+}
+
+.about-card p {
+  color: var(--neutral-600);
+  line-height: 1.8;
+  margin-bottom: var(--spacing-md);
+}
+
+.about-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-card li {
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  color: var(--neutral-600);
+}
+
+.about-card li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--primary-blue);
+  font-weight: bold;
+}
+
+/* Experience Timeline */
+.experience-item {
+  padding: var(--spacing-lg) 0;
+  border-bottom: 1px solid var(--neutral-200);
+  position: relative;
+  padding-left: var(--spacing-lg);
+}
+
+.experience-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: var(--spacing-lg);
+  width: 10px;
+  height: 10px;
+  background: var(--primary-blue);
+  border-radius: 50%;
+  border: 3px solid var(--neutral-white);
+}
+
+.experience-item:last-child {
+  border-bottom: none;
+}
+
+.experience-item h4 {
+  color: var(--primary-blue);
+  margin-bottom: 0.25rem;
+}
+
+.experience-item .company {
+  color: var(--primary-accent);
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+}
+
+.experience-item .date {
+  color: var(--neutral-500);
+  font-size: 0.9rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+/* Skills Grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.skill-item {
+  background: linear-gradient(135deg, rgba(30, 64, 175, 0.1), rgba(14, 165, 233, 0.1));
+  padding: var(--spacing-md);
+  border-radius: 0.5rem;
+  text-align: center;
+  border: 1px solid var(--primary-light-blue);
+  transition: all var(--transition-base);
+}
+
+.skill-item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary-blue);
+}
+
+.skill-item h5 {
+  color: var(--primary-blue);
+  margin-bottom: var(--spacing-sm);
+}
+
+.skill-item p {
+  font-size: 0.85rem;
+  color: var(--neutral-600);
+  margin: 0;
+}
+
+/* Certifications Grid */
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.certification-item {
+  background: var(--neutral-white);
+  border: 2px solid var(--neutral-200);
+  border-radius: 0.75rem;
+  padding: var(--spacing-lg);
+  transition: all var(--transition-base);
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+.certification-item:hover {
+  border-color: var(--primary-blue);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+.certification-icon {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, rgba(30, 64, 175, 0.1), rgba(14, 165, 233, 0.1));
+  border-radius: 0.5rem;
+  flex-shrink: 0;
+}
+
+.certification-content h4 {
+  color: var(--primary-dark);
+  margin-bottom: 0.25rem;
+}
+
+.certification-content .issuer {
+  color: var(--primary-accent);
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+}
+
+.certification-content .date {
+  color: var(--neutral-500);
+  font-size: 0.85rem;
+}
+
+/* Flagship Projects Section */
+.flagship-project {
+  background: var(--neutral-white);
+  border-left: 4px solid;
+  padding: var(--spacing-lg);
+  border-radius: 0.5rem;
+  transition: all var(--transition-base);
+}
+
+.flagship-project:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+.flagship-project h4 {
+  margin-bottom: var(--spacing-sm);
+}
+
+.flagship-project p:first-of-type {
+  color: var(--neutral-500);
+  font-size: 0.95rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.flagship-project ul {
+  list-style: none;
+  padding: 0;
+  margin-top: var(--spacing-md);
+}
+
+.flagship-project li {
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  font-size: 0.9rem;
+  color: var(--neutral-600);
+}
+
+.flagship-project li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* Impact Badge */
+.impact-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--primary-blue), var(--primary-accent));
+  color: var(--neutral-white);
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-md);
+}
+
+/* ==========================================
+   ABOUT RESPONSIVE STYLES
+   ========================================== */
+
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .certifications-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .certification-item {
+    flex-direction: column;
+  }
+
+  .certification-icon {
+    width: 100%;
+    height: auto;
+    padding: var(--spacing-md) 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-item {
+    padding-left: 1rem;
+  }
+
+  .experience-item::before {
+    left: -5px;
+  }
+}
