@@ -516,6 +516,7 @@ function generateProjectModalContent(project) {
 }
 
 // Initialize projects on page load
-document.addEventListener('DOMContentLoaded', renderProjects);
+// Commenting out to prevent duplication - projects-page.js handles rendering
+// document.addEventListener('DOMContentLoaded', renderProjects);
 
-console.log('✓ Projects initialized');
+console.log('✓ Projects data loaded');
