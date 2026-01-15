@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  portfolio:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: emife-portfolio
+    ports:
+      - "80:80"
+    restart: unless-stopped
+    environment:
+      - TZ=UTC
+    # Uncomment below to mount for live development
+    # volumes:
+    #   - .:/usr/share/nginx/html
